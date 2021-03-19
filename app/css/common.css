@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    outline: none !important;
+}
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+.tabheader__item_active {
+    background: #CFA688;
+    color: #ffffff;
+}
+
+.swiper-slide-active .team-txt {
+    opacity: 100%;
+}

@@ -1,0 +1,39 @@
+- const arrowTop = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAA9CAYAAACkwemJAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAB2SURBVHgB7dDLCcBACARQSQUpwY7s/5RSzIcI4qrZkEsOM7AXcR6yREVUlY+33Y/pTVzZMo8k5XkklOMFPZKU2QHcItWCtbsd6nQPFLvrOZTqtAgkiNhQLm38lwFwiNBTKsBnoY8BAAAAAAAAAAAAAAAAgP8CO+n6LGYhHslDAAAAAElFTkSuQmCC'
+- const arrowPrices = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAQCAYAAACm53kpAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAC8SURBVHgB5ZWxDcJADEW/EYKWEbIBygiZAFrKjEBJRQmIIdIFOkYIG3iFG4E2lTl3FPGR2n7SXePqP8n+gHO4v+35cams+QKO0fCAvCA0WBJcC8C4euc/5VdZElwLqNvjB6M0KEggBIC7HHpNA1SCyiBp6sMp6SyEAMWSEEaAMiWBuL8K4pJ8t8AMYq2ANoD8rEBuiDhHcCJ83QY5glZ4nbkXUAqvuBbwL7ziuwVouUUhfAj4ed9xd95Y8y+R0WeuVSC1HwAAAABJRU5ErkJggg=='
+
+.footer-content.md_py-24.py-16
+    .container.flex.justify-between.flex-wrap
+        .footer-menu(class="w-auto pr-10 mb-10 sm_w-1/2 md_w-1/4 sm_mb-0 sm_pr-0")
+            a.text-gold.sm_mb-24.font-playfair.text-4xl.flex.w-auto.mb-10(href="/prices.html") Prices
+                span.flex.items-center.pt-2.block.ml-5
+                    img(src=arrowPrices, alt="Arrow")
+
+            p.text-gold.font-playfair.text-4xl.mb-4.tracking-wider Services
+            ul
+                -
+                    const links = [
+                        {label: 'Haircuts for women', href: '/services.html'},
+                        {label: 'Haircuts for men', href: '/services.html'},
+                        {label: 'Hair color', href: '/services.html'},
+                        {label: 'Styling', href: '/services.html'},
+                    ]
+                each link in links
+                    li.mb-2.text-lg.hover_text-gold.duration-200
+                        a.tracking-wider(href=link.href)= link.label
+           
+        .footer-logo.md_flex.flex-col.justify-center(class="items-center hidden w-1/2 py-24 border-b-2 border-white lg_border-t-2 ")
+            p.text-gold.font-playfair.lg_text-9xl.font-bold.block.tracking-wider.text-7xl Bianchi
+            p(class="mb-20 font-light") International network of beauty salons
+            a.hover_bg-white.hover_text-dark.hover_border-gold.w-48.h-14.bg-gold.text-white.block.border-2.border-white.text-2xl.tracking-widest.text-center.pt-3.duration-200(href="#") booking
+        .footer-contacts(class="flex flex-col w-auto sm_w-1/2 md_items-end md_w-1/4")
+            div
+                p.text-gold.font-playfair.text-4xl.mb-2.tracking-wider Contacts
+                a.text-xl.sm_mb-16.block.mb-10.hover_text-gold.duration-200(href="tel:+180005454555") +180 00 545 45 55
+                p.text-gold.font-playfair.text-4xl.mb-2.tracking-wider Address
+                p.text-lg.leading-9.font-playfair.tracking-wider 1435 Lemoine Avenue<br> Basement Level<br> Fort Lee NJ, 07020
+    .container.flex.justify-between.sm_pt-20.relative.items-center.flex-wrap.pt-10
+        include /components/social-networks.pug
+        p.text-xs Copyright © 2019-2020 Salon
+        p.text-xs.hidden.sm_block fashion hairstyles
+        a(href="#offer").absolute.sm_top-0.right-14.-top-10
+            img(src=arrowTop, alt="Arrow")

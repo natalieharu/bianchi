@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title 
+            block title
+        block meta  
+        link(rel="preconnect" href="https://fonts.gstatic.com")
+        link(href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Roboto:wght@300;400;700&display=swap")
+        
+        block styles
+    body.text-base.bg-white.font-roboto.overflow-x-hidden.w-full.h-auto.min-h-screen.antialiased.font-normal
+        header(class="relative header before_w-full lg_before_w-1/2 before_h-full content-before before_absolute before_bg-opacity-90 before_bg-dark before_top-0 before_left-0 before_z-1 content-after after_absolute lg_after_w-1/2 after_h-full after_left-0 after_top-0 after_w-full after_bg-bg-header after_z-2")
+            include /components/navigation.pug
+            block header
+        main#content
+            block content
+        footer.bg-dark.text-white.relative.bg-opacity-90(class="top-0 content-before before_bg-bg-header before_absolute before_h-full before_w-full before_bg-opacity-10 before_z-1")
+            block footer
+                include /sections/footer.pug
+        block scripts 
+        

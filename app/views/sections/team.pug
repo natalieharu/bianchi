@@ -1,0 +1,34 @@
+- const h2Class = ['sm_pb-24', 'sm_text-6xl', 'w-full', 'relative', 'text-center', 'uppercase', 'font-playfair', 'text-4xl', 'pb-10']
+- const afterClass = ['content-after', 'after_w-500', 'after_h-0.5', 'after_bg-white', 'after_absolute', 'after_top-1/2', 'after_left-1/2', 'after_-translate-x-1/2', 'after_transform', 'after_hidden', 'md_after_block']
+- const arrowTeam = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAACICAYAAACRF3m+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHwSURBVHgB7ZxRbQMxEERXRVAIx6Bh0GPQMGgZNAxaBi2DgxAIgRAILoNA2NqKT3Hym4k0I8376e9oGz/vxqtEEJOZc7DTQuaZYzBTA5Ye9CtYqeE+esgSrNRw01DN92Clhvum/2z2aq5MwUoNt/SQS7BSw21UqlmsIwQ13LOajujlbh1BUKpmkdJRO/XBinWE4uYAvQQr1hGSGu6opqMpWLGOUPQDdOpBX4MV6whJDXfoIX+CFesIiZKO1mq+BSvWEZIabq9QTesIRg23U9MRdTUX6wiFSjXldPQZrKTfKYEMB2gfrFhHSGq4rZqO/E55F0o6+u0hD8GKdYQkL1tcJ+voXqwjJOktLiAqOvIWF4qn/vcvFBhuIu5/fWM4TLydUiPPO3Lru+UczLTDpFTVQn+FNoampH0MeJenGnl5cOVt8xoyjXMjFd6NGnm9ZjEHM2q6Wqu6DWZyePCyrlDc6EqmqrxbN428Hv42wUyrpntWNMMlwPuVz0peetZdMKOqK5lLIBV6VusKjlrPWnpYj9gwVHvWKZhJj9gPQE1XHrHhqOrKIzaE9Ij9AFR7Vo/YMFR15REbhnX1CNR61tLD0o/YW+sKTYqN2EsP6xEbhpquPGLDUdWVR2wIeT1iz8GMqq7mYGbQFffV2sjh93f+AUrEnIFEOvEqAAAAAElFTkSuQmCC'
+
+section.team.bg-dark.lg_py-24.text-white.py-16
+    h2(class=h2Class, class=afterClass) Our team
+    .container
+        .swiper-container.slider-team.w-full.lg_py-12.h-full.py-5
+            button.team-slider-prev(class="absolute z-10 hidden pr-3 transform -translate-y-1/2 h-96 top-1/2 lg_bg-dark sm_inline-block")
+                img(src=arrowTeam, alt="")
+            button.team-slider-next(class="absolute right-0 z-10 hidden pl-3 transform -translate-y-1/2 top-1/2 h-96 lg_bg-dark sm_inline-block")
+                img.transform.rotate-180(src=arrowTeam, alt="")
+            .swiper-wrapper.mb-10
+                .swiper-slide.team-slide.w-72.h-96.bg-white.bg-team1.bg-cover.bg-center.border.border-transparent.group.flex.items-end.hover_border-white
+                    .team-txt.flex-col.p-5.duration-300.opacity-0.bg-dark.bg-opacity-70.group-hover_opacity-100
+                        h4.text-gold.text-lg.text-center.font-playfair.mb-3 Natalie Wilson
+                        p.text-xs.leading-5.tracking-wider A virtuoso of transformation, skillfully mastering dyeing techniques, challenging conservative haircuts. She knows how to emphasize your personality and natural beauty.
+                .swiper-slide.team-slide.w-72.h-96.bg-white.bg-team2.bg-cover.bg-center.border-transparent.border.group.flex.items-end.hover_border-white
+                    .team-txt.flex-col.p-5.duration-300.opacity-0.bg-dark.bg-opacity-70.group-hover_opacity-100
+                        h4.text-gold.text-lg.text-center.font-playfair.mb-3 Piers Taylor
+                        p.text-xs.leading-5.tracking-wider A virtuoso of transformation, skillfully mastering dyeing techniques, challenging conservative haircuts. She knows how to emphasize your personality and natural beauty.
+                .swiper-slide.team-slide.w-72.h-96.bg-white.bg-team3.bg-cover.bg-center.border-transparent.border.group.flex.items-end.hover_border-white
+                    .team-txt.flex-col.p-5.duration-300.opacity-0.bg-dark.bg-opacity-70.group-hover_opacity-100
+                        h4.text-gold.text-lg.text-center.font-playfair.mb-3 Mary Bianchi
+                        p.text-xs.leading-5.tracking-wider A virtuoso of transformation, skillfully mastering dyeing techniques, challenging conservative haircuts. She knows how to emphasize your personality and natural beauty.
+                .swiper-slide.team-slide.w-72.h-96.bg-white.bg-team1.bg-cover.bg-center.border-transparent.border.group.flex.items-end.hover_border-white
+                    .team-txt.flex-col.p-5.duration-300.opacity-0.bg-dark.bg-opacity-70.group-hover_opacity-100
+                        h4.text-gold.text-lg.text-center.font-playfair.mb-3 Emily Anderson
+                        p.text-xs.leading-5.tracking-wider A virtuoso of transformation, skillfully mastering dyeing techniques, challenging conservative haircuts. She knows how to emphasize your personality and natural beauty.
+                .swiper-slide.team-slide.w-72.h-96.bg-white.bg-team2.bg-cover.bg-center.border-transparent.border.group.flex.items-end.hover_border-white
+                    .team-txt.flex-col.p-5.duration-300.opacity-0.bg-dark.bg-opacity-70.group-hover_opacity-100
+                        h4.text-gold.text-lg.text-center.font-playfair.mb-3 Piers Taylor
+                        p.text-xs.leading-5.tracking-wider A virtuoso of transformation, skillfully mastering dyeing techniques, challenging conservative haircuts. She knows how to emphasize your personality and natural beauty.
+            .swiper-pagination

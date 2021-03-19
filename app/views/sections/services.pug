@@ -1,0 +1,28 @@
+- const arrowBooking = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAICAYAAAABfSQaAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABCSURBVHgB5ZJBDQAgDAMLGEICOJkTpPJFBiXZBwSsDy659Nkla0Ec5rkgoNLpKeE6INGBWE5xoz3jI2R/lw7O3uIN28AIC9XqzBYAAAAASUVORK5CYII='
+
+section.services.lg_py-24.container.py-16
+    - const afterClass = ['content-after', 'sm_after_w-500', 'after_h-0.5', 'after_bg-dark', 'after_absolute', 'after_top-1/2', 'after_left-1/2', 'after_-translate-x-1/2', 'after_transform', 'after_w-250']
+    - const h2Class = ['pb-24', 'sm_text-6xl', 'w-full', 'relative', 'text-center', 'uppercase', 'font-playfair', 'text-4xl']
+
+    h2(class=afterClass, class=h2Class) Our services
+
+    - const titleClass = ['text-xl', 'font-bold', 'font-playfair', 'mb-6', 'tracking-wide']
+    - const textClass = ['tracking-wide', 'leading-7', 'sm_max-w-sm']
+    
+    ul.services-item.sm_grid.lg_grid-cols-3.gap-4.grid-rows-2.place-items-center
+        li.text-center.col-start-1.col-end-2.mb-14
+            h4(class=titleClass) Haircuts for women
+            p(class=textClass) Having many years of experience, our specialists salon will create an exclusive image that emphasize your beauty.
+        li.text-center.col-start-1.col-end-2.mb-14.sm_mb-0
+            h4(class=titleClass) Haircuts for men
+            p(class=textClass) The beauty salon offers hairdressing services for men: barber, tanks, beard, half box. Talented craftsmen will offer suitable styling.
+        li.col-start-2.col-end-3.row-start-1.row-end-3.sm_hidden.lg_block.h-144.w-144.lg_h-auto.lg_w-auto.mb-14.lg_mb-0.mx-auto.lg_mx-0
+            img.w-full.h-full(src=require('/img/services.png').default, alt="Scissors")
+        li.text-center.col-start-3.col-end-4.row-start-1.row-end-2.mb-14
+            h4(class=titleClass) Hair color
+            p(class=textClass) If you have long wanted changes in the image and are determined to change the color of curls, then our masters will be happy to help you in this matter.
+        li.text-center.col-start-3.col-end-4
+            h4(class=titleClass) Styling
+            p(class=textClass) Creating a hairstyle is a whole art. Masters master even the most naughty hair. They will recommend the best option.
+    .btn-booking.flex.justify-center.lg_pt-24.pt-10.pb-12.items-center
+        a.hover_bg-gold.hover_text-white.w-48.h-14.text-dark.border-2.border-white.text-2xl.tracking-widest.text-center.border-2.border-gold.pt-3(href="#") booking

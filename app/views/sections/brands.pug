@@ -1,0 +1,28 @@
+- const arrowSlider = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGUAAAAQCAYAAAAPk7G9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABrSURBVHgB7dWhDYBAEETRARqghOkI+jdQAhIHewEFQTPiv2TE5eQXOwh/mGt7bRMitCBHbalZiDDqCkKYMBZhIlmEiWQRJpL1CNPdD+RYewF4sbgrUSyCRLEIEsUiSBSLIHEmESRSCzN+fZ4+4ybqZ9/e3AAAAABJRU5ErkJggg==' 
+
+- const h2Class = ['sm_text-6xl', 'w-full', 'relative', 'uppercase', 'font-playfair', 'text-4xl']
+
+section.brands.pt-16.sm_pb-24.bg-gray.pb-16
+    .brands-content.flex.items-center
+        .brends-left(class="hidden w-2/5 lg_block")
+            .brends-bg(class="")
+                img(src=require('/img/img3.jpg').default, alt="")
+        .brends-right.w-full(class="lg_w-3/5")
+            h2.sm_mb-14.text-center.lg_text-left(class=h2Class) Brands we use
+            .swiper-container.slider-brands.w-full
+                .swiper-wrapper.flex.items-center
+                    -
+                        const brandsImages = [
+                            {src: require('/img/keune.png').default},
+                            {src: require('/img/bronx.png').default},
+                            {src: require('/img/plcosmetic.png').default},
+                            {src: require('/img/cutrin.png').default},
+                        ]
+                    each img in brandsImages
+                        .swiper-slide.sm_w-64.grid.place-items-center.w-full
+                            img.object-contain.sm_w-full.h-full.w-300(src=img.src, alt="Works")
+                .slider-navigation.items-center.flex.justify-between.sm_px-20.px-2
+                    button.brands-slider-next
+                        img.transform.rotate-180(src=arrowSlider, alt="Arrow")
+                    button.brands-slider-prev
+                        img(src=arrowSlider, alt="Arrow")

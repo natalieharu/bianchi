@@ -1,0 +1,43 @@
+- const h2Class = ['sm_pb-24', 'sm_text-6xl', 'w-full', 'relative', 'text-center', 'uppercase', 'font-playfair', 'text-4xl', 'pb-12']
+- const afterClass = ['content-after', 'after_w-500', 'after_h-0.5', 'after_bg-white', 'after_absolute', 'lg_after_top-1/2', 'after_left-1/2', 'after_-translate-x-1/2', 'after_transform', 'after_bottom-16', 'after_hidden', 'md_after_block']
+- const h3Class = ['xl_text-3xl', 'tracking-widest', 'xl_mb-6', 'font-light', 'text-gold', 'text-2xl', 'mb-4']
+
+section.pluss.lg_py-24.bg-dark.text-white.py-16
+    h2(class=h2Class, class=afterClass) Why do customers choose us?
+    .plus-content.lg_flex.container.sm_pt-10
+        .plus-left(class="w-full pb-12 pr-0 lg_w-1/2 lg_pr-20 lg_pb-0")
+            .plus-img.xl_h-500.xl_w-750.relative.sm_w-500.flex.w-full.sm_-left-20.content-after.after_bg-gold.after_w-500.xl_after_w-750.after_h-350.xl_after_h-500.after_absolute.after_-top-10.after_left-10.after_hidden.sm_after_block
+                img.lg_absolute.z-10(src=require('/img/women.jpg').default, alt="")
+
+        .plus-right(class="w-full pl-5 lg_w-1/2 xl_pl-10")
+           
+            ul.plus-list.flex.flex-wrap.justify-between
+                -   
+                   
+                    const elements = [
+                        {
+                            title: 'Experience',
+                            descr: 'Since 2010, the beauty salon has been successfully providing services in the field of beauty and cosmetology.',
+                        },
+                        {
+                            title: 'Quality',
+                            descr: 'We provide a high level of service and professionalism of our masters.',
+                        },
+                        {
+                            title: 'Safety',
+                            descr: 'Each instrument undergoes a 4-step cleaning and sterilization procedure, and all consumables are disposable.',
+                        },
+                        {
+                            title: 'Comfort',
+                            descr: 'Cabinet for VIP and express services. Coffee, tea, cookies and Wi-Fi are free for salon customers.',
+                        },
+                    ]
+                    
+                
+                each el in elements
+                    li.xl_w-300.xl_mb-20.lg_w-220.mb-10.md_w-300.w-250
+                        h3(class=h3Class)=el.title
+                        p.tracking-wider.text-15.xl_text-base=el.descr
+
+            .btn-booking.flex.justify-center.xl_pt-24.lg_pb-12.items-center.sm_pt-16.pb-7.pt-7
+                a.duration-200.hover_text-white.hover_bg-gold.w-48.h-14.text-white.border-2.border-white.text-2xl.tracking-widest.text-center.border-2.border-gold.pt-3(href="#") booking

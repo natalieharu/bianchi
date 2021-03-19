@@ -1,0 +1,14 @@
+- const arrowMore = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAICAYAAAABfSQaAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABCSURBVHgB5ZJBDQAgDAMLGEICOJkTpPJFBiXZBwSsDy659Nkla0Ec5rkgoNLpKeE6INGBWE5xoz3jI2R/lw7O3uIN28AIC9XqzBYAAAAASUVORK5CYII='
+
+section.container.lg_pb-24.lg_pt-36.about.sm_flex.pb-16.pt-20#about
+    div(class="w-full sm_w-1/2 md_w-1/3 lg_w-1/2 about-img")
+        .lg_w-400.lg_h-480.w-250.h-300.m-auto.relative.lg_after_w-400.after_w-250.content-after.after_h-300.lg_after_h-480.after_bg-dark.after_absolute.lg_after_top-10.after_top-8.after_-left-10.after_z-1
+            img.w-full(src=require('/img/about.jpg').default, alt="Woman")
+    div(class="w-full mt-16 sm_mt-0 sm_w-1/2 md_pl-10 md_w-2/3 lg_w-1/2 about-info lg_pl-0")
+        h2.md_text-5xl.md_mb-8.font-playfair.text-3xl.mb-5.text-center.sm_text-left Welcome to Salon Bianchi
+        p.md_leading-8.leading-7 
+           | Salon Bianchi - business class salons. We have repeatedly won prizes in the field of beauty and service. And the interiors of our salons received prestigious awards at design competitions. Stylists-hairdressers Salons are constantly improving their level, many have been trained at the schools Frederic Moreno. Thanks to this, we can advise you on a haircut or coloring, which will most advantageously emphasize your advantages.
+        p.text-xs.md_mt-20.mt-10.flex.justify-end.font-playfair Mary Bianchi
+        a.flex.items-center.hover_text-gold.duration-200(href="/about.html") more
+            .arrow-more.ml-2.pt-1
+                img(src=arrowMore)

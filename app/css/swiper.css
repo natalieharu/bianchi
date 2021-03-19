@@ -1,0 +1,11 @@
+@import '~swiper/swiper.min.css';
+@import '~swiper/components/navigation/navigation.min.css';
+@import '~swiper/components/effect-coverflow/effect-coverflow.min.css';
+@import '~swiper/components/pagination/pagination.min.css';
+
+.swiper-pagination-bullet-active {
+    background: rgb(255, 255, 255);
+}
+.swiper-pagination-bullet {
+    background: #CFA688;
+}

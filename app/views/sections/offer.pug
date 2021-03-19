@@ -1,0 +1,35 @@
+- const arrowImg = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAABaCAYAAACFSRd3AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACiSURBVHgB7c6xDcIwEAXQ+/EANgM4yiiwQTYANmETYAJGYAUo6axULp02UnzYRZCRIGmo0P3y/tPdERVpcqxty1lVlhzjlYFLU9fbaa7KEsCNmD0B7UrrEPr+rl4l0SGVj4QMhmHPSp0yqmgc17l0XXee1jrvXUKbGKOhtyet3aX7x49PfosAAQIE/AgAOjKHuQ2mAmbBwgkBAgQIEPCfYDFP1+I3zIQXTtMAAAAASUVORK5CYII=' 
+
+- const arrowToDown = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAABGCAYAAADFJBSLAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAB6SURBVHgB7dfBCcAgEERRSQUpIR0l/V9SysYFg7K4g5Bj/oAgOPPuliJiLaqzlY8BAAAAAAAAAAAAAAAAAPgDUP/XVz3H6qh2d9+UYey5IzL7vXundT3nq90zJAJh3LvZwwikY6Vbjx4LxMI9HyeIBUSPBbI+niBy/AC1tCSFol749AAAAABJRU5ErkJggg=='
+
+.offer.flex.w-full.container.xl_pb-16#offer
+    div(class="flex flex-col flex-wrap w-full h-auto lg_w-1/2 offer-left")
+        h1(class="content-before before_absolute before_h-0.5 before_w-64 before_bg-white before_block lg_before_-top-24 before_-top-12 xl_text-64 text-4xl sm_text-7xl lg_text-5xl lg_mt-44 sm_mt-28 mt-20").relative.font-normal.text-white.font-playfair.uppercase.mb-14.leading-tight.tracking-wider Salon<br> hairdresser
+        a.mb-20.hover_bg-white.hover_text-dark.hover_border-gold.xl_mb-48.lg_mb-28.duration-200.w-48.h-14.bg-gold.text-white.block.border-2.border-white.text-2xl.tracking-widest.text-center.pt-3(href="#") booking
+        .offer-left-bottom.relative.flex.items-end.xl_mt-auto.lg_mb-7.xl_mb-0.mb-12
+            include /components/social-networks.pug
+            a(href="#about").inline-block.sm_right-64.absolute.bottom-0.right-5
+                img(src=arrowToDown, alt="Arrow Down")
+    div(class="flex-col items-end hidden w-1/2 h-auto lg_flex offer-right")
+        .offer-slider.mt-16.mb-24.xl_flex.items-center.justify-between.w-550.xl_w-750.h-350.xl_h-500
+            .offer-slider-wrapper.w-full.h-full.xl_-ml-36
+                .offer-slider-inner.w-full.transition.duration-500
+                    -
+                        const images = [
+                            {src: require('/img/offer-slide.jpg').default},
+                            {src: require('/img/women.jpg').default},
+                            {src: require('/img/img3.jpg').default},
+                        ]
+                    each img in images
+                        .offer-slide.w-full.h-500.transition.duration-500
+                            img.w-full.h-full.object-cover(src=img.src, alt="Slide")
+
+            .slider-navigation.items-center.flex.xl_flex-col.justify-center
+                button.offer-slider-next.-rotate-90.transform.xl_rotate-0.h-90.w-90.flex.items-center.justify-center
+                    img(src=arrowImg, alt="arrow")
+                span.uppercase.xl_mt-5.text-gold#current.text-xl.mx-5.xl_mx-0 01
+                span.w-8.h-8.rounded-full.border-2.border-dark.block.xl_my-4.mr-5.xl_mr-0
+                span.uppercase.xl_mb-5#total.mr-5.xl_mr-0 04
+                button.offer-slider-prev.transform.xl_rotate-180.rotate-90.h-90.w-90.flex.items-center.justify-center
+                    img(src=arrowImg, alt="arrow")
+        p.flex.justify-end.text-xs.tracking-widest.mt-auto fashion hairstyles

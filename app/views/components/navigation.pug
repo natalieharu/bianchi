@@ -1,0 +1,36 @@
+nav.flex.justify-between.items-center.container.py-6.relative
+    div(class="flex flex-wrap items-center justify-between w-full lg_w-auto lg_justify-start")
+        a.text-gold.font-playfair.text-4xl.lg_mr-52(class="w-full mb-5 sm_w-auto sm_mb-0")(href="/") Bianchi
+        a.text-white(class="mr-24 lg_mr-0")(href="tel:+180 00 545 45 55") +180 00 545 45 55
+        //- Hamburger Button
+        <button class="absolute z-50 flex flex-col items-end w-12 hamburger-btn lg_hidden right-6 top-7">
+            <span class="duration-300 transform rotate-0 w-full h-0.5 block mb-2 bg-white"></span>
+            <span class="duration-300 transform w-2/3 h-0.5 block mb-2 bg-white"></span>
+            <span class="duration-300 transform rotate-0 w-full h-0.5 block bg-white"></span>
+        </button>
+        ul(class="absolute top-0 right-0 z-30 hidden w-full p-10 text-center menu-hamburger bg-menu")
+            -
+                const linksMob = [
+                    {label: 'Home', href: '/'},
+                    {label: 'About', href: '/about.html'},
+                    {label: 'Services', href: '/services.html'},
+                    {label: 'Prices', href: '#'},
+                    {label: 'Contacts', href: '#'},
+                ]
+            each linkMob in linksMob
+                li(class="mb-5 hover_text-gold")
+                    a.p-2.text-2xl.text-white(href=linkMob.href)= linkMob.label
+
+    //- Main menu
+    ul(class="justify-end hidden w-1/2 lg_flex")
+        -
+            const links = [
+                {label: 'Home', href: '/'},
+                {label: 'About', href: '/about.html'},
+                {label: 'Services', href: '/services.html'},
+                {label: 'Prices', href: '#'},
+                {label: 'Contacts', href: '#'},
+            ]
+        each link in links
+            li(class="xl_ml-10 ml-7 hover_text-gold")
+                a.p-2(href=link.href)= link.label

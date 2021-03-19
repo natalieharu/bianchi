@@ -1,0 +1,98 @@
+- const h2Class = [' md_pb-24', 'sm_text-6xl', 'w-full', 'relative', 'text-center', 'uppercase', 'font-playfair', 'pb-10', 'text-4xl']
+- const afterClass = ['content-after', 'after_w-500', 'after_h-0.5', 'after_bg-dark', 'after_absolute', 'after_top-1/2', 'after_left-1/2', 'after_-translate-x-1/2', 'after_transform', 'after_hidden', 'md_after_block']
+- const arrowSlider = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJcAAAAQCAYAAAAbKu0ZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABuSURBVHgB7dmxDYNADIZRJxMwwm2U7N9klMshqBA0cH/3nmR5gU9y4aoLvfdlzLdgphFVG/Prm0/BDIew1t0KnhIWEcIiQlhECIuU1xrU2K1gsndBirNIlMCIEhhRAiPqJLClYBaPa6L2wITFbX/xfuCBBe065gAAAABJRU5ErkJggg==' 
+
+
+section.works.xl_pt-10.lg_pb-24.pb-16
+    h2(class=h2Class, class=afterClass) Works of our masters
+    .tabcontainer.bg-dark.pb-20.w-full 
+        .tabheader.flex.justify-center.container
+            ul(class="sm_w-2/3 md_w-1/2").sm_py-0.w-full.py-3.tabheader__items.sm_pb-12.font-bold.font-playfair.tracking-wider.text-lg.bg-white.flex.flex-wrap.justify-center
+
+                each val in ['women', 'men', 'colour', 'hairstyle']
+                    li.cursor-pointer.py-1.lg_px-5.px-2.xl_mx-3.tabheader__item.tabheader__item_active(class="w-1/3 mx-2 text-center hover_text-white hover_bg-gold sm_w-auto")=val
+                    
+        .tabcontent.container.women-works
+            .swiper-container.slider-works.pt-10.-mt-5.sm_-mt-10
+                .slider-navigation.items-center.sm_flex.justify-between.xl_px-20.lg_px-10.absolute.top-0.left-0.right-0.hidden
+                    button.works-slider-prev
+                        img(src=arrowSlider, alt="Arrow")
+                    button.works-slider-next
+                        img.transform.rotate-180(src=arrowSlider, alt="Arrow")
+                .swiper-wrapper.flex.items-center.xl_w-350.xl_h-450.sm_w-250.md_h-300.sm_h-350.w-full.h-450 
+
+                    -
+                        const tabImagesWomen = [
+                            {src: require('/img/tab1.jpg').default},
+                            {src: require('/img/tab2.jpg').default},
+                            {src: require('/img/tab3.jpg').default},
+                            {src: require('/img/tab4.jpg').default},
+                            {src: require('/img/tab2.jpg').default},
+                        ]
+                    each img in tabImagesWomen
+                        .swiper-slide.flex.justify-center
+                            img.w-full.h-full.object-cover.max-w-xs.sm_max-w-none(src=img.src, alt="Works")
+        .tabcontent.container.women-works
+            .swiper-container.slider-works.pt-10(class="-mt-5 sm_-mt-10")
+                .slider-navigation.items-center.sm_flex.justify-between.xl_px-20.lg_px-10.absolute.top-0.left-0.right-0.hidden
+                    button.works-slider-prev
+                        img(src=arrowSlider, alt="Arrow")
+                    button.works-slider-next
+                        img.transform.rotate-180(src=arrowSlider, alt="Arrow")
+                .swiper-wrapper.flex.items-center.xl_w-350.xl_h-450.sm_w-250.md_h-300.sm_h-350.w-full.h-450 
+
+                    -
+                        const tabImagesMen = [
+                            {src: require('/img/tab2.jpg').default},
+                            {src: require('/img/tab3.jpg').default},
+                            {src: require('/img/tab1.jpg').default},
+                            {src: require('/img/tab4.jpg').default},
+                            {src: require('/img/tab2.jpg').default},
+                        ]
+                    each img in tabImagesMen
+                        .swiper-slide.flex.justify-center
+                            img.w-full.h-full.object-cover.max-w-xs.sm_max-w-none(src=img.src, alt="Works")
+
+        .tabcontent.container.women-works
+            .swiper-container.slider-works.pt-10.-mt-5.sm_-mt-10
+                .slider-navigation.items-center.sm_flex.justify-between.xl_px-20.lg_px-10.absolute.top-0.left-0.right-0.hidden
+                    button.works-slider-prev
+                        img(src=arrowSlider, alt="Arrow")
+                    button.works-slider-next
+                        img.transform.rotate-180(src=arrowSlider, alt="Arrow")
+                .swiper-wrapper.flex.items-center.xl_w-350.xl_h-450.sm_w-250.md_h-300.sm_h-350.w-full.h-450 
+
+                    -
+                        const tabImagesColour = [
+                            {src: require('/img/tab4.jpg').default},
+                            {src: require('/img/tab2.jpg').default},
+                            {src: require('/img/tab1.jpg').default},
+                            {src: require('/img/tab4.jpg').default},
+                            {src: require('/img/tab2.jpg').default},
+                        ]
+                    each img in tabImagesColour
+                        .swiper-slide.flex.justify-center
+                            img.w-full.h-full.object-cover.max-w-xs.sm_max-w-none(src=img.src, alt="Works")
+        .tabcontent.container.women-works
+            .swiper-container.slider-works.pt-10.-mt-5.sm_-mt-10
+                .slider-navigation.items-center.sm_flex.justify-between.xl_px-20.lg_px-10.absolute.top-0.left-0.right-0.hidden
+                    button.works-slider-prev
+                        img(src=arrowSlider, alt="Arrow")
+                    button.works-slider-next
+                        img.transform.rotate-180(src=arrowSlider, alt="Arrow")
+                .swiper-wrapper.flex.items-center.xl_w-350.xl_h-450.sm_w-250.md_h-300.sm_h-350.w-full.h-450 
+
+                    -
+                        const tabImagesHair = [
+                            {src: require('/img/tab3.jpg').default},
+                            {src: require('/img/tab1.jpg').default},
+                            {src: require('/img/tab2.jpg').default},
+                            {src: require('/img/tab4.jpg').default},
+                            {src: require('/img/tab2.jpg').default},
+                        ]
+                    each img in tabImagesHair
+                        .swiper-slide.flex.justify-center
+                            img.w-full.h-full.object-cover.max-w-xs.sm_max-w-none(src=img.src, alt="Works")
+        p.text-center.text-white.mt-12.text-sm.tracking-wider We look forward to welcoming you very soon!
+                
+                
