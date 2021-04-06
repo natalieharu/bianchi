@@ -5,6 +5,9 @@ const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const ShowAssetsTablePlugin = require('webpack-show-assets-table');
+const WebpackBar = require('webpackbar');
+var WebpackNotifierPlugin = require('webpack-notifier');
 
 const isProd = process.env.MODE === 'production';
 const isIE = process.env.IE;
@@ -46,6 +49,13 @@ const plugins = [
 		filename: isProd ? 'css/[name].[contenthash].css' : 'css/[name].css',
 	}),
 	new CleanWebpackPlugin(),
+	new WebpackBar({
+		name: 'Bianchi progress is: '
+	}),
+	new WebpackNotifierPlugin({
+		title: 'Bianchi status'
+	}),
+	new ShowAssetsTablePlugin()
 ];
 
 if (!isProd) {
@@ -81,6 +91,7 @@ module.exports = {
 		about: ['./js/about.js', './js/common.js'],
 		services: ['./js/services.js', './js/common.js'],
 	},
+	stats: 'errors-only',
 	resolve: {
 		alias: {
 			'@': path.resolve(__dirname, 'app/'),

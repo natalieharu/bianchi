@@ -44,7 +44,10 @@
     "tailwindcss-pseudo-elements": "^1.5.1",
     "webpack": "^5.11.1",
     "webpack-cli": "^4.3.1",
-    "webpack-dev-server": "^3.11.1"
+    "webpack-dev-server": "^3.11.1",
+    "webpack-notifier": "^1.13.0",
+    "webpack-show-assets-table": "^1.0.0",
+    "webpackbar": "^5.0.0-3"
   },
   "dependencies": {
     "swiper": "^6.4.8",
