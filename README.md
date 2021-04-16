@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Bianchi site for salon
 =======
 Bianchi site for salon
@@ -16,6 +15,3 @@ Bianchi site for salon
 | TailwindCSS | https://tailwindcss.com |
 | SwiperJS | https://swiperjs.com |
 
-
-
->>>>>>> 244b1564ef617df5acf5bbf8085f3f3d75cadcf0
