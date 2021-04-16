@@ -1,6 +1,4 @@
 # Bianchi site for salon
-=======
-Bianchi site for salon
 
 ### Template engine
 
